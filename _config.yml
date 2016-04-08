@@ -45,7 +45,7 @@ owner:
   avatar: profile.png
   bio: "A Full-Stack Web Developer currently enjoying Aurelia and tuning SQL queries."
   email:
-  disqus-shortname:
+  disqus-shortname: rabidcanary
   twitter: mttmccb
   google:
     analytics: UA-40047293-1
