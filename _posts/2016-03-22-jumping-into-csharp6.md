@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jumping into C# 6"
+title: "[Crosspost] Jumping into C# 6"
 modified:
 excerpt: "A few of my favourite parts of C# 6."
 tags: []
