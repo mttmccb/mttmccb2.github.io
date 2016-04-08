@@ -1,0 +1,10 @@
+---
+layout: post
+title: "Creating Multipage Apps Using Aurelia"
+excerpt: "Very handy, possibly outdated due to enhance."
+tags: [link post]
+link: http://patrickwalters.net/creating-multipage-apps-using-aurelia-2/
+share: true
+---
+
+Very handy, possibly outdated due to enhance.
