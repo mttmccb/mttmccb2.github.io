@@ -121,7 +121,7 @@ The Aurelia parts here are binding the value of the `select` input to `selectedL
 </template>
 ```
 
-At the moment there isn't much to the Javascript, it's just a class with a few properties which includes an array of the languages<sup>[1](#language-footnote)</sup> we're going to support and also the `selectedLanguage`, which we will make use of later.
+At the moment there isn't much to the Javascript, it's just a class with a few properties which includes an array of the languages[^language-footnote] we're going to support and also the `selectedLanguage`, which we will make use of later.
 
 #### language-switcher.js
 ```javascript
@@ -380,4 +380,4 @@ This only shows off a small part of i18n, I didn't get into number or date forma
 ## Conclusion
 I'm quite happy with how easy it was to get i18n setup in Aurelia, it doesn't overly complicate the skeleton, but I can see how it might in some cases. Where possible I'd try to use `BaseI18N` and inherit from that.
 
-<small><a name="language-footnote">1</a>: If you're wondering why the language in brackets is translated into english except english which is translated into welsh it's because I started with the first too. Saesneg looks a lot like sassenach which is seem as derogatory but it just mean english in welsh or gaelic.</small>
+[^language-footnote]: If you're wondering why the language in brackets is translated into english except english which is translated into welsh it's because I started with the first too. Saesneg looks a lot like sassenach which is seem as derogatory but it just mean english in welsh or gaelic.
