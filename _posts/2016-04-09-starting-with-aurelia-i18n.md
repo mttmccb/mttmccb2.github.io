@@ -5,15 +5,16 @@ modified:
 excerpt: "Posting about starting with Aurelia i18n."
 tags: []
 image:
-  feature: octopus2.jpg
-published: false
+  feature: sirhowy-river.jpg
+  credit: Jim McSweeney
+  creditlink: https://www.flickr.com/photos/73118846@N04/23900161566/in/photolist-4FYRxy-Eu9tGt-FjBR4n-CpYzn9-EptS4m-dkLb2H-4FYRvU-sHeR2-4FUF66-uEaH6G-tExfjY-vBaF5Z-tofp2U-tooXSt-6dSmd7-6dSqjm-EYwwaf-DWtw5e-6dSjfu-EHqWAX-bHMm6R-bHMwEn-wUBfuJ-6dShTS-dkLa77-Bc91ag-FczwFR-FaGaLF-EXKXXG-qAaeGA-B6mmoF-Ciygv5-fzTNgu-ot5gTM-yj64yS-xp5DDJ-yw9NZn-zGaWaw-oD7ZSq-AounKt-FgV3NZ-AnWc4p-CJasCH-sMWeQE-CpkHX3-bHMkd4-FggJXw-s437ED-Bfz5k7-wy7THM
 ---
 
 {% include _toc.html %}
 
-As usual I wanted to jump right in the deep end with [Aurelia](http://aurelia.io) as I'm in the processing building an app that'll rely quite heavily on translations.
+As usual I wanted to jump right in the deep end with [Aurelia](http://aurelia.io). I'm in the processing building an app that'll rely quite heavily on translations so I wanted to test it out on a simply example.
 
-So I found the not yet complete [i18n library](https://github.com/aurelia/i18n), but I also wanted to use it with [TypeScript](https://www.typescriptlang.org/) and [Webpack](https://webpack.github.io/). Sadly it's not that easy to do that as both of them are just being used by the Aurelia community. Although it's the end goal and I'll hopefully show how I got it working, when I get it working ;)
+So I found the not yet complete [i18n library](https://github.com/aurelia/i18n), but I also wanted to use it with [TypeScript](https://www.typescriptlang.org/) and [Webpack](https://webpack.github.io/). Sadly it's not that easy to do that as both of them are relatively new to the Aurelia community so there's not much support available. Although it's the end goal and I'll hopefully show how I got it working, when I get it working ;)
 
 ## Aurelia i18n on ES2016
 Using [system.js](https://github.com/systemjs/systemjs) with [jspm](https://jspm.io/) is the most established way of working with Aurelia so I thought it would be best getting it working with that first before I tackle the stack I want to use.
@@ -29,7 +30,7 @@ To test it I came up with a basic plan
   * German - because it was the last language I tried to learn
   * Russian - because my wife knows a bit and it's uses a cyrillic script
   
-If you want to skip to the final result it's in [my fork](https://github.com/mttmccb/skeleton-navigation/tree/develop) of the skeleton navigation.
+If you want to skip to the final result it's in [my fork](https://github.com/mttmccb/skeleton-navigation/tree/i18n) of the skeleton navigation.
 
 ### Step 1 - Setup the latest ES2016 skeleton
 The steps are in the README so I won't repeat them here but in summary you want to run the following
@@ -64,7 +65,7 @@ and then use it.
 <language-switcher></language-switcher>
 ```
 
-you can pass in information but the language switcher is self contained and uses the `EventAggregator` to interact with the rest of the application so we don't need anything else here. You can see the update file below.
+you can pass in information but the language switcher is self contained and uses the `EventAggregator` to interact with the rest of the application so we don't need anything else here. You can see the updated file below.
 
 #### nav-bar.html (updated)
 ```html
@@ -119,7 +120,7 @@ The Aurelia parts here are binding the value of the `select` input to `selectedL
 </template>
 ```
 
-At the moment there is much to the Javascript, it's just a class with a few properties which includes an array of the languages<sup>[1](#language-footnote)</sup> we're going to support and also the `selectedLanguage`, which we will make use of later.
+At the moment there isn't much to the Javascript, it's just a class with a few properties which includes an array of the languages<sup>[1](#language-footnote)</sup> we're going to support and also the `selectedLanguage`, which we will make use of later.
 
 #### language-switcher.js
 ```javascript
@@ -141,7 +142,7 @@ At this point we have just done standard Aurelia although we've added a *current
 
 Next we need to add i18n, refer to the [aurelia i18n repo](https://github.com/aurelia/i18n) for the latest way to do this but I did it like this
 
-* Install the plugin via `jspm` with following command
+* ed the plugin via `jspm` with following command
 
 ```shell
     jspm install aurelia-i18n
@@ -151,9 +152,9 @@ Next we need to add i18n, refer to the [aurelia i18n repo](https://github.com/au
 ```html
     <body aurelia-app="main">
 ```
-* Create a `locales` folder in the project root
-* For each locale create a new folder with it's name (e.g. `en`, `de`, ...)
-* In those subfolders create a file named `translation.json` which contains your language specific translations. The en one looks like this, this contains all the strings that we're going to translate:
+* Created a `locales` folder in the project root
+* For each locale created a new folder with it's name (e.g. `en`, `de`, ...)
+* In those subfolders created a file named `translation.json` which contains your language specific translations. The en one looks like this, this contains all the strings that we're going to translate:
 
 ```javascript
     {
@@ -169,13 +170,14 @@ Next we need to add i18n, refer to the [aurelia i18n repo](https://github.com/au
         "contact": "Contact"
     }
 ```
-* Install the [XHR Plugin](https://github.com/i18next/i18next-xhr-backend) with the following command
+* Installed the [XHR Plugin](https://github.com/i18next/i18next-xhr-backend) with the following command
 
 ```shell
     jspm install npm:i18next-xhr-backend
 ```
-* Update `main.js` in your `src` folder with following content:
+* Updated `main.js` in our `src` folder with following content:
 
+#### main.js (updated)
 ```javascript
     import {I18N} from 'aurelia-i18n';
     import XHR from 'i18next-xhr-backend'; // <-- your previously installed backend plugin 
@@ -207,8 +209,8 @@ Next we need to add i18n, refer to the [aurelia i18n repo](https://github.com/au
 ### Step 4 - Update the Welcome view
 There isn't much involved in updating the Welcome view model, we've just extended from the `BaseI18N` class which takes care of injecting `i18n` and `EventAggregator`, setting up the `attached()` method to update the translation as well as subscribing to an event which does the same when the locale changes. It's definitely worth understanding what this does and understanding how to use a `constructor` if you need to. You'll need to use `super` but I haven't got my head around how this works but it's not needed below.
 
+#### welcome.js (updated)
 ```javascript
-//import {computedFrom} from 'aurelia-framework';
 import {BaseI18N} from 'aurelia-i18n';
 
 export class Welcome extends BaseI18N {
@@ -217,11 +219,6 @@ export class Welcome extends BaseI18N {
     lastName = 'Doe';
     previousValue = this.fullName;
 
-    //Getters can't be directly observed, so they must be dirty checked.
-    //However, if you tell Aurelia the dependencies, it no longer needs to dirty check the property.
-    //To optimize by declaring the properties that this getter is computed from, uncomment the line below
-    //as well as the corresponding import above.
-    //@computedFrom('firstName', 'lastName')
     get fullName() {
         return `${this.firstName} ${this.lastName}`;
     }
@@ -241,32 +238,34 @@ export class Welcome extends BaseI18N {
 
 Updating the HTML is involves add a `t` attribute with the translation key to all the relevant elements. Nothing too scary here.
 
+#### welcome.html (updated)
 ```html
 <template>  
-  <section class="au-animate">
-    <h2 t="title">Welcome to the Aurelia Navigation App!</h2>
-    <form role="form" submit.delegate="submit()">
-      <div class="form-group">
-        <label for="fn" t="first_name">First Name</label>
-        <input type="text" value.bind="firstName" class="form-control" id="fn" placeholder="first name">
-      </div>
-      <div class="form-group">
-        <label for="ln" t="last_name">Last Name</label>
-        <input type="text" value.bind="lastName" class="form-control" id="ln" placeholder="last name">
-      </div>
-      <div class="form-group">
-        <label t="full_name">Full Name</label>
-        <p class="help-block">${fullName | upper}</p>
-      </div>
-      <button type="submit" class="btn btn-default" t="submit">Submit</button>
-    </form>
-  </section>
+    <section class="au-animate">
+        <h2 t="title">Welcome to the Aurelia Navigation App!</h2>
+        <form role="form" submit.delegate="submit()">
+        <div class="form-group">
+            <label for="fn" t="first_name">First Name</label>
+            <input type="text" value.bind="firstName" class="form-control" id="fn" placeholder="first name">
+        </div>
+        <div class="form-group">
+            <label for="ln" t="last_name">Last Name</label>
+            <input type="text" value.bind="lastName" class="form-control" id="ln" placeholder="last name">
+        </div>
+        <div class="form-group">
+            <label t="full_name">Full Name</label>
+            <p class="help-block">${fullName | upper}</p>
+        </div>
+        <button type="submit" class="btn btn-default" t="submit">Submit</button>
+        </form>
+    </section>
 </template>
 ```
 
 ### Step 5 - Update the User View Model
-I took a slighty different approach for the Users view model in that I'm being the work of injecting i18n, I haven't setting up the events or attach method but as we'll see later it works, I'm not sure why yet.
+I took a slighty different approach for the Users view model in that I'm being the work of injecting `i18n`, I haven't setting up the events or attach method but as we'll see later it works, I'm not sure why yet.
 
+#### users.js (updated)
 ```javascript
 import {inject} from 'aurelia-framework';
 import {HttpClient} from 'aurelia-fetch-client';
@@ -300,8 +299,9 @@ export class Users {
 There isn't much to the HTML, I've just added the `t` attributes.
 
 ### Step 6 - Update the Routers
-The routers were a little tricky initially but I was reminded by [K. Scott Allen](http://odetocode.com/blogs/scott/archive/2016/02/22/binding-aurelia-routing-rules.aspx) about using the settings property to RouteConfig entry. So that seemed like the obvious way to setup the translation too. Apart from that all we're doing is injecting i18n.
+The routers were a little tricky initially but I was reminded by [K. Scott Allen](http://odetocode.com/blogs/scott/archive/2016/02/22/binding-aurelia-routing-rules.aspx) about using the `settings` property to `RouteConfig` entry. So that seemed like the obvious way to setup the translation too. Apart from that all we're doing is injecting `i18n`.
 
+#### app.js (updated)
 ```javascript
 import {I18N} from 'aurelia-i18n';
 import {inject} from 'aurelia-framework';
@@ -309,26 +309,26 @@ import {inject} from 'aurelia-framework';
 @inject(I18N)
 export class App {
     constructor(i18n) {
-       this.i18n = i18n;
+        this.i18n = i18n;
     }
     
-  configureRouter(config, router) {
-    config.title = 'Aurelia';
-    config.map([
-      { route: ['', 'welcome'], name: 'welcome',      moduleId: 'welcome',      nav: true, title: 'Welcome', settings: { t:'welcome' } },
-      { route: 'users',         name: 'users',        moduleId: 'users',        nav: true, title: 'Github Users', settings: { t:'github_users' }},
-      { route: 'child-router',  name: 'child-router', moduleId: 'child-router', nav: true, title: 'Child Router', settings: { t:'child_router' }}
-    ]);
-
-    this.router = router;
-  }
+    configureRouter(config, router) {
+        config.title = 'Aurelia';
+        config.map([
+            { route: ['', 'welcome'], name: 'welcome',      moduleId: 'welcome',      nav: true, title: 'Welcome', settings: { t:'welcome' } },
+            { route: 'users',         name: 'users',        moduleId: 'users',        nav: true, title: 'Github Users', settings: { t:'github_users' }},
+            { route: 'child-router',  name: 'child-router', moduleId: 'child-router', nav: true, title: 'Child Router', settings: { t:'child_router' }}
+        ]);
+        
+        this.router = router;
+    }
 }
 ```
 
 Updating the HTML is pretty straightforward we just need to add `t.bind="row.settings.t"` to bind the value we've setup for each navigation item.
 
+#### nav-bar.html (extract)
 ```html
-/// Extract from updated nav-bar.html
 ...
 <ul class="nav navbar-nav">
     <li repeat.for="row of router.navigation" class="${row.isActive ? 'active' : ''}">
@@ -338,9 +338,12 @@ Updating the HTML is pretty straightforward we just need to add `t.bind="row.set
 ...
 ```
 
-### Step 6 - Enable the language switcher
-So far we've done all the donkey work to so when we do change locale all the relevent strings are translated. Now we need to inject i18n into the language switcher and setup a way to switch languages. As you can see from the code that's exactly what I've done, the `switchLanguage` method uses the i18n `setLocale` method to set it to the locale selected. In the background this will raise the 'changed locale' event which will be picked up by our view models.
+The `child-router` is almost identical so I won't repeat that here.
 
+### Step 6 - Enable the language switcher
+So far we've done all the donkey work to so when we do change locale all the relevent strings are translated. Now we need to inject `i18n` into the language switcher and setup a way to switch languages. As you can see from the code that's exactly what I've done, the `switchLanguage` method uses the i18n `setLocale` method to set it to the locale selected. In the background this will raise the 'changed locale' event which will be picked up by our view models.
+
+#### language-switcher.js (updated)
 ```javascript
 import {inject} from 'aurelia-framework';
 import {I18N} from 'aurelia-i18n';
@@ -367,18 +370,13 @@ export class LanguageSwitcher {
 ```
 
 ## Gotcha, Issues and workarounds
-
 - Don't forget that adding a `t` attribute will replace the `textContent`, I forgot to include the punctuation and this was clear as it was in the translation file.
-- Loading multiple language doesn't seem to work
-    - related issue
+- Loading multiple language didn't work initially with aurelia-i18n 0.5.0 but this was fixed in 0.5.1, you can see the hack in a previous commit if you really want.
     
 ## Improvements
-
 This only shows off a small part of i18n, I didn't get into number or date formats or different ways it can be implemented, when I make more use of those features I'll be sure to share it on this blog.
 
 ## Conclusion
+I'm quite happy with how easy it was to get i18n setup in Aurelia, it doesn't overly complicate the skeleton, but I can see how it might in some cases. Where possible I'd try to use `BaseI18N` and inherit from that.
 
-
-## Footnotes
-
-<a name="language-footnote">1</a>: If you're wondering why the language in brackets is translated into english except english which is translated into welsh it's because I started with the first too. Saesneg looks a lot like sassenach which is seem as derogatory but it just mean english in welsh or gaelic.
+<small><a name="language-footnote">1</a>: If you're wondering why the language in brackets is translated into english except english which is translated into welsh it's because I started with the first too. Saesneg looks a lot like sassenach which is seem as derogatory but it just mean english in welsh or gaelic.</small>
