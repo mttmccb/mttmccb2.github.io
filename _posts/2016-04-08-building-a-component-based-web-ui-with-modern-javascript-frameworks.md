@@ -5,6 +5,7 @@ excerpt: "A nice introduction to UI component."
 tags: [link post]
 link: http://derickbailey.com/2015/08/26/building-a-component-based-web-ui-with-modern-javascript-frameworks/
 share: true
+comments: true
 ---
 
 A nice introduction to UI component.
