@@ -3,7 +3,7 @@ layout: post
 title: "Starting with Aurelia i18n"
 modified:
 excerpt: "Posting about starting with Aurelia i18n."
-tags: []
+tags: [aurelia, i18n]
 image:
   feature: sirhowy-river.jpg
   credit: Jim McSweeney
