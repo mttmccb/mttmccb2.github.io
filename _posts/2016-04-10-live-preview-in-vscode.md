@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Live Preview in VS Code"
-excerpt: "A lightweight way to enable live preview in VS Code"
+excerpt: "A lightweight way to enable live preview in VS Code."
 tags: [vscode]
 share: true
 comments: true

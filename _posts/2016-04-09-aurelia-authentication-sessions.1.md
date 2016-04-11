@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Aurelia Authentication: Sessions"
-excerpt: "I did implement this but my version wasn't as clean"
+excerpt: "I did implement this but my version wasn't as clean."
 tags: [link post, aurelia, authentication]
 link: http://davismj.me/blog/aurelia-auth-pt2/
 share: true
