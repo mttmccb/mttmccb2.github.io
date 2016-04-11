@@ -7,3 +7,5 @@ link: http://davismj.me/blog/aurelia-bundling/
 share: true
 comments: true
 ---
+
+Much easier than the last time I tried it.
