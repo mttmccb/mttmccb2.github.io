@@ -31,7 +31,7 @@ body {
     text-transform: none;
     font-family: $site-title-font;
     font-weight: 400;
-	@include font-rem(48);
+	@include font-rem(40);
     & a {
         text-shadow: 2px 2px $canaryyellow;  
     }
@@ -39,7 +39,7 @@ body {
 		@include grid(12,2);
 		@include prefix(12,0.5);
 		@include suffix(12,0.5);
-		@include font-rem(42);
+		@include font-rem(36);
 	}
 	@media #{$x-large} {
 		@include grid(12,1.5);
