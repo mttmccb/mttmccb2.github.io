@@ -1,6 +1,6 @@
 ---
 layout: home
-excerpt: "A minimal Jekyll theme for your blog by designer Michael Rose."
+excerpt: "A blog from Full-Stack Web Developer Matt McCabe."
 tags: [Jekyll, theme, responsive, blog, template]
 image:
   feature: canary-with-lasers.jpg
