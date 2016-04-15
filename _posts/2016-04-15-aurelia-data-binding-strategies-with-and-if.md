@@ -7,3 +7,5 @@ link: http://patrickwalters.net/aurelia-data-binding-strategies/
 share: true
 comments: true
 ---
+
+A great summary of how to bind things that don't exist yet

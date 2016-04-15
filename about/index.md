@@ -2,6 +2,7 @@
 layout: page
 title: About the Blog
 tags: [about]
+excerpt: "Learn about why I started the blog and what it's about"
 modified: 2014-08-08T20:53:07.573882-04:00
 comments: true
 image:
