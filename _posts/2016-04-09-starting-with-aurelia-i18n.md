@@ -1,17 +1,14 @@
 ---
-layout: post
 title: "Starting with Aurelia i18n"
-modified:
 excerpt: "Posting about starting with Aurelia i18n."
 tags: [aurelia, i18n]
-image:
-  feature: sirhowy-river.jpg
-  credit: Jim McSweeney
-  creditlink: https://www.flickr.com/photos/73118846@N04/23900161566/in/photolist-4FYRxy-Eu9tGt-FjBR4n-CpYzn9-EptS4m-dkLb2H-4FYRvU-sHeR2-4FUF66-uEaH6G-tExfjY-vBaF5Z-tofp2U-tooXSt-6dSmd7-6dSqjm-EYwwaf-DWtw5e-6dSjfu-EHqWAX-bHMm6R-bHMwEn-wUBfuJ-6dShTS-dkLa77-Bc91ag-FczwFR-FaGaLF-EXKXXG-qAaeGA-B6mmoF-Ciygv5-fzTNgu-ot5gTM-yj64yS-xp5DDJ-yw9NZn-zGaWaw-oD7ZSq-AounKt-FgV3NZ-AnWc4p-CJasCH-sMWeQE-CpkHX3-bHMkd4-FggJXw-s437ED-Bfz5k7-wy7THM
-comments: true
+header:
+  image: sirhowy-river.jpg
+  caption: "Photo credit: [**Jim McSweeney**](https://www.flickr.com/photos/73118846@N04/23900161566/in/photolist-4FYRxy-Eu9tGt-FjBR4n-CpYzn9-EptS4m-dkLb2H-4FYRvU-sHeR2-4FUF66-uEaH6G-tExfjY-vBaF5Z-tofp2U-tooXSt-6dSmd7-6dSqjm-EYwwaf-DWtw5e-6dSjfu-EHqWAX-bHMm6R-bHMwEn-wUBfuJ-6dShTS-dkLa77-Bc91ag-FczwFR-FaGaLF-EXKXXG-qAaeGA-B6mmoF-Ciygv5-fzTNgu-ot5gTM-yj64yS-xp5DDJ-yw9NZn-zGaWaw-oD7ZSq-AounKt-FgV3NZ-AnWc4p-CJasCH-sMWeQE-CpkHX3-bHMkd4-FggJXw-s437ED-Bfz5k7-wy7THM
+)"
 ---
 
-{% include _toc.html %}
+{% include toc title="Contents" icon="file-text" %}
 
 As usual I wanted to jump right in the deep end with [Aurelia](http://aurelia.io). I'm in the processing building an app that'll rely quite heavily on translations so I wanted to test it out on a simply example.
 

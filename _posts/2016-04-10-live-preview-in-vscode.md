@@ -1,10 +1,7 @@
 ---
-layout: post
 title: "Live Preview in VS Code"
 excerpt: "A lightweight way to enable live preview in VS Code."
 tags: [vscode]
-share: true
-comments: true
 ---
 
 I occassionally have to work on static HTML sites and for these I've been using VSCode rather than Visual Studio as it's so much faster to make a few small changes. I've done this with browser sync while doing Aurelia development but this is overkill for this situation. Until now I didn't have an easy way to see the changes I'm making without the usual 'F5 - change something - F5" loop.

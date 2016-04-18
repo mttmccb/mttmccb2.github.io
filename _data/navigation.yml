@@ -1,5 +1,5 @@
-# Site navigation links
-
+# main links links
+main:
 - title: About
   url: /about/
 
@@ -8,7 +8,3 @@
 
 - title: Tag Archive
   url: /tags/
-
-
-- title: mttmccb.net
-  url: http://mttmccb.net
