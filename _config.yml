@@ -10,7 +10,7 @@ locale                   : "en-GB"
 title                    : "Rabid Canary"
 title_separator          : "-"
 name                     : "Matt McCabe"
-description              : "An amazing website."
+description              : "A blog about Aurelia, Dapper, SQL query tuning and whatever else I find"
 url                      : https://mttmccb.github.io
 baseurl                  : # the subpath of your site, e.g. "/blog"
 gh_repo                  :
