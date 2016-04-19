@@ -1,7 +1,7 @@
 ---
 title: "Concatenating Lists in C#"
 excerpt: "A quick example of how to use Concat."
-tags: [c#]
+tags: [csharp]
 ---
 
 I came across a time today when I had to concatenate a number of lists of the same type. To do this you can use the `Concat` extension method from the `System.Linq` namespace.

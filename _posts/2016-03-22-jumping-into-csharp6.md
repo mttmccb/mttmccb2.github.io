@@ -2,7 +2,7 @@
 title: "[Crosspost] Jumping into C# 6"
 modified:
 excerpt: "A few of my favourite parts of C# 6."
-tags: ["c#6"]
+tags: [csharp6]
 ---
 
 > Originally published on [mttmccb.net](http://mttmccb.net/blog/2016/jumping-into-c-6)
