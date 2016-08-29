@@ -1,6 +1,6 @@
 ---
 title: "Setter Callback in Aurelia"
-excerpt: ""
+excerpt: "Demonstrating setter callbacks using lemmings"
 tags: [aurelia, design-patterns, observer]
 ---
 

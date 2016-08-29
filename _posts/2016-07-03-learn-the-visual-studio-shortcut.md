@@ -1,6 +1,6 @@
 ---
 title: "Learn the Visual Studio Shortcuts"
-excerpt: ""
+excerpt: "A quick run down of this extension"
 tags: [visual-studio]
 ---
 
