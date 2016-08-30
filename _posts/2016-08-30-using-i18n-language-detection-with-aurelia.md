@@ -1,6 +1,6 @@
 ---
 title: "Using i18next language detection with Aurelia"
-excerpt: "A bit more on this..."
+excerpt: "How to get setup with this handy plugin"
 tags: [aurelia, i18n, i18next]
 ---
 
