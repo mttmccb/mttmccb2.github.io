@@ -2,6 +2,9 @@
 title: "Using i18next language detection with Aurelia"
 excerpt: "How to get setup with this handy plugin"
 tags: [aurelia, i18n, i18next]
+header:
+  image: radio-detector-rover-min.jpg
+  caption: "Photo credit: [**Pascal**](https://www.flickr.com/photos/pasukaru76/6832318941/in/photolist-bpKqor-9mPY7C-ou57Yj-ou74rZ-orZ3oo-oeZLXg-ow7JCb-owc2pD-ow8nVX-odX69N-JCnf79-ocMguU-fqoPCH-ocu9Un-ocFZUs-ou633z-fqoKgX-a1QS9b-otZhRL-dEruTv-otREqc-dEwTU7-odoa6y-ayaiAx-otM5Qs-a1MYSB-odK2gR-otDyzZ-oupkQU-oydLKn-ocAZpu-os69Ab-odiHy9-6XgE13-ouePDT-owb56T-otZj7G-odGE35-otNYc3-otJJhK-ou6S3g-otZpTb-orZ7w3-dCfw4H-otUWff-otMipW-ocxs3p-ocw6Sj-otEq2p-ocseZN)"
 ---
 
 I'd been trying to add language detection to a multi-lingual [Aurelia](http://aurelia.io) project I'm working on. I'm already using [aurelia-i18n](https://github.com/aurelia/i18n) and have it setup like this...
